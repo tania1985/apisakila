@@ -23,7 +23,6 @@ else {
         'message' => 'No se han recibido los datos necesarios'
     ];
     $json = json_encode ($response);
+include ('../envio.php');
 }
-header ('Content-Type: application/json');
-echo $json;
 ?>
