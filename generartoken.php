@@ -1,4 +1,5 @@
 <?php
+
 require 'generar_jwt.php';
 
 if(isset($_POST["user"]) && isset($_POST["password"])) {

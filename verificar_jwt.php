@@ -1,4 +1,5 @@
 <?php
+include_once("../validarAcceso.php");
 require 'vendor/autoload.php';
 require 'config.php';
 
@@ -12,7 +13,7 @@ function verificarToken($token) {
         return (array) $decoded;
     } catch (Exception $e) {
         http_response_code(401);
-        echo json_encode(["error" => "Acceso no autorizado"]);
+        echo json_encode(["error" => "Acceso no autorizado, token caducado o inválido"]);
         exit();
     }
 }

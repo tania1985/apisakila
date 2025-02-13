@@ -1,4 +1,5 @@
 <?php
+include_once("../validarAcceso.php");
 include ("../conexiondb.php");
 $sql = "SELECT F.film_id, F.title, F.description, F.release_year 
 FROM film AS F INNER JOIN film_actor AS FA ON F.film_id=FA.film_id 

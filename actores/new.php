@@ -1,4 +1,5 @@
 <?php
+include_once("../validarAcceso.php");
 if (isset ($_POST ["name"]) && $_POST ["lastname"]){
 include ("../conexiondb.php");
 $sql = "INSERT INTO actor (first_name, last_name) VALUES (:first_name, :last_name)";
