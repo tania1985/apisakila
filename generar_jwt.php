@@ -8,7 +8,7 @@ use Firebase\JWT\JWT;
 function generarToken($usuario_id) {
     $clave_secreta = JWT_SECRET_KEY;
     $tiempo_actual = time();
-    $expiracion = $tiempo_actual + (60); // Expira en 1 minuto
+    $expiracion = $tiempo_actual + (60 * 60); // Expira en 1 hora
 
     $payload = [
         "iss" => "tu-api.com",
